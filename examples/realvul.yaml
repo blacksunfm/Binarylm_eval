@@ -1,0 +1,19 @@
+
+task: realvul
+dataset_path: F:/LLMs/dataset/realvul/
+dataset_name: null
+dataset_kwargs:
+  data_files: F:/LLMs/dataset/realvul/
+output_type: multiple_choice
+training_split: null
+validation_split: null
+test_split: test
+doc_to_text: "{{code}}
+Question: Is there any vulnerability in the code segment?
+Answer:"
+doc_to_target: target
+doc_to_choice: ["0", "1"]
+should_decontaminate: true
+doc_to_decontamination_query: code
+metric_list:
+  - metric: acc
